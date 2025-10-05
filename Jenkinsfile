@@ -16,7 +16,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    docker.image("sanjanasurpurkar/myapp-jenkins:1.0").run()
+                    docker.image("sanjanasurpurkar/myapp-jenkins:1.0").run("-p 8000:8000")
                 }
             }
         }
